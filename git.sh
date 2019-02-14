@@ -1,4 +1,5 @@
 #初始化仓库
+git config credential.helper store
 git config --global user.name "1548976092" 
 git config --global user.email "1548976092@qq.com"
 git init
