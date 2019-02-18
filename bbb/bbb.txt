@@ -1,0 +1,33 @@
+查看内存大小fdisk -l | grep Disk
+
+
+connmanctl
+> enable wifi # 启用无线网卡
+> scan wifi # 扫描无线网络
+> services # 列举扫描到的无线网络
+> services wifi_*_psk # [optional] 查看某个无线网络的具体信息
+> agent on # [ptional] 无密码的可以不需要这句
+> connect wifi_*_psk # 不是SSID，二是后面对应的wifi_*，根据自己情况修改此时会要求你输入网络密码
+> state # 成功连接状态为ready，已连上网是online
+> help # 显示帮助文件
+> exit # 退出
+再保存在开机里面
+nano /etc/network/interfaces
+
+
+扩容（剩余存储空间的利用）
+BBB开发板自带2G eMMC，但此容量远远满足不了开发，因此使用SD卡扩展空间。插入SD卡后，开发板无法启动。究其原因，BBB原生系统所带的uboot启动时，若发现有SD卡，则SD变成mmc0，eMMC变成mmc1，导致启动失败。
+◆方法（1）
+系统自行配置了运行脚本，运行此脚本即可扩容。
+
+cd /opt/scripts/tools
+./grow_partition.sh
+reboot
+--------------------- 
+作者：whh7777 
+来源：CSDN 
+原文：https://blog.csdn.net/whh7777/article/details/84536888 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+sudo sysctl vm.swappiness=50

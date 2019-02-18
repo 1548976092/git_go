@@ -1,0 +1,2 @@
+sudo dpkg -i --force-overwrite   /var/cache/apt/archives/python-rospkg-modules_1.1.7-1_all.deb 
+sudo apt --fix-broken install
