@@ -1,0 +1,9 @@
+#1添加这两行当
+#2019-02-20 23:34:15.742370: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+
+
+import os  
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'  
+#2缺少eager
+
+pip install tf-nightly
