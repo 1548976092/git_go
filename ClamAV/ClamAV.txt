@@ -1,0 +1,7 @@
+sudo apt-get install clamav
+systemctl stop clamav-freshclam.service 
+sudo  freshclam
+clamscan -r /home
+systemctl start clamav-freshclam.service
+sudo clamscan -r /
+
