@@ -5,3 +5,11 @@ clamscan -r /home
 systemctl start clamav-freshclam.service
 sudo clamscan -r /
 
+扫描所有文件并且显示有问题的文件的扫描结果
+clamscan -r --bell -i /
+
+#只显示找到的病毒信息
+clamscan --no-summary -ri /tmp
+
+#扫描home
+clamscan --infected --remove --recursive /home
