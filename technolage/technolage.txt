@@ -7,3 +7,6 @@ find / -name httpd.conf
 #开机自启配置eth0网口
 sudo nano /etc/rc.local
 echo fa | sudo -S ifconfig eth0 192.168.66.99
+
+#踢掉用户 who am i
+pkill -kill -t pts/2
