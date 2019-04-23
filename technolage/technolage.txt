@@ -10,3 +10,10 @@ echo fa | sudo -S ifconfig eth0 192.168.66.99
 
 #踢掉用户 who am i
 pkill -kill -t pts/2
+
+
+
+#创建文件：
+touch .scmversion
+touch：如果fileA存在，使用touch指令可更改这个文件或目录的日期时间，包括存取时间和更改时间；
+#如果fileA不存在，touch指令会在当前目录下新建一个空白文件fileA。
