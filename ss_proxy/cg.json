@@ -1,0 +1,11 @@
+{
+    "server": "s2.xhxhong.pw",
+    "server_port": "6668",
+    "password": "XiSpi3",
+    "local_address": "127.0.0.1",
+    "local_port": 1080,
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false,
+    "workers":"1"
+}
