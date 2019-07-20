@@ -1,5 +1,5 @@
 #!/bin/bash
-
+pwd=/home/pi/pzx-git/git_go/ss_proxy
 printFun(){
 	echo "/***********/"
 	echo "/**select***/"
@@ -13,9 +13,9 @@ printFun(){
 
 case $1 in
 0) echo "/*kill ss*/";ps -ef |grep sslocal|grep -v grep|cut -c 9-15|xargs kill -9 ;;
-1) echo "/***ali***/";sslocal -c ali.json & ;;
-2) echo "/****cg***/";sslocal -c  cg.json & ;;
-*) printFun;	      sslocal -c ali.json & ;;
+1) echo "/***ali***/";sslocal -c $pwd/ali.json & ;;
+2) echo "/****cg***/";sslocal -c $pwd/cg.json & ;;
+*) printFun;	      sslocal -c $pwd/ali.json & ;;
 esac 
 
 exit 0
